@@ -1,0 +1,29 @@
+<div class="author">
+    <h1 class="author_heading">Hi, I am Aviral</h1>
+    <p class="author_body">Web Developer and content creator.</p>
+</div>
+
+<img src="/img/job.jpg" alt="Main Logo" class="hero-image" width="400" height="350">
+
+
+<!-- Articles -->
+<section class="article">
+    <h2 class="article_heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(post=> { %>      
+        <li>
+            <a href="/post/<%= post._id %>" >
+                <span><%= post.title %></span>
+                <span class="article-list_date"><%= post.createdAt.toDateString()  %></span>
+            </a>
+        </li>
+        <% }) %>
+
+    </ul>
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<% nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+
+   
+</section>
