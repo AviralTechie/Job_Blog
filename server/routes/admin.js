@@ -23,7 +23,7 @@ router.get('/admin', async (req,res) => {
 router.post('/admin', async (req, res) => {
     try {
         const { username, password } = req.body;
-        if(username === 'admin' && password === 'password'){
+        if(req.body.username === 'admin' && req.body.password === 'password'){
             // Redirect to /admin if login credentials are correct
             res.send('You are logged in.')
         } else {
