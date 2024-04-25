@@ -1,14 +1,18 @@
-<a href="/dashboard">&larr; Back </a>
+<a href="/dashboard" class="back-link">&larr; Back </a>
 <div class="admin-title">
     <h2>Add New Post </h2>
-    <div>
-        <form action="/add-post" method="POST">
-            <label for="title"><b>Title</b></label>
-            <input type="text" name="title" id="" placeholder="Post Title">
-            <label for="body"><b>Content</b></label>
-            <textarea name="body" id="" cols="50" rows="10"></textarea>
-
-            <input type="submit" value="Add" class="btn">
-        </form>
-    </div>
 </div>
+
+<div class="form-container">
+    <form action="/add-post" method="POST">
+        <label for="title" class="form-label"><b>Title</b></label>
+        <input type="text" name="title" id="" placeholder="Post Title" class="form-input">
+
+        <label for="body" class="form-label"><b>Content</b></label>
+        <textarea name="body" id="" cols="50" rows="10" class="form-textarea"></textarea>
+
+        <input type="submit" value="Add" class="btn">
+    </form>
+</div>
+
+
