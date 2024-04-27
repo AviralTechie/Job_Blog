@@ -165,9 +165,7 @@ img{
     cursor: pointer;
 }
 
-.header_button:hover{
-    border: .5px solid var(--black);
-}
+
 
 .header_nav ul {
     list-style: none;
@@ -505,3 +503,23 @@ img{
 .back-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+
+/* Register button */
+
+.signup-button a{
+    left: 90%;
+    top: 40%;
+    display: inline-block;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.signup-button a:hover {
+    background-color: gray;
+}
+
+  
