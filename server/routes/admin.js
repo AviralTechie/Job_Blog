@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 
 
 const adminLayout = '../views/layouts/admin';
+const logout = '../views/layouts/logout';
 const jwtSecret = process.env.JWT_SECRET;
 
 
@@ -115,7 +116,7 @@ router.get('/dashboard', authMiddleWare, async (req, res) => {
         res.render('admin/dashboard' , {
             locals,
             data,
-            layout:adminLayout
+            layout:logout
         });
     }catch(error){
         console.log(error);
@@ -134,7 +135,7 @@ router.get('/add-post', authMiddleWare, async (req, res) => {
         const data = await Post.find();
         res.render('admin/add-post' , {
             locals,
-            layout:adminLayout
+            layout:logout
         });
     }catch(error){
         console.log(error);
@@ -178,7 +179,7 @@ router.get('/edit-post/:id', authMiddleWare, async (req, res) => {
       res.render('admin/edit-post',{
         locals,
         data,
-        layout: adminLayout
+        layout: logout
       })
     }catch(error){
         console.log(error);
