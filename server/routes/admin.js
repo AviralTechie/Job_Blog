@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const adminLayout = '../views/layouts/admin';
+const logout = '../views/layouts/logout'
 const jwtSecret = process.env.JWT_SECRET;
 
 
@@ -93,7 +94,7 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
     res.render('admin/dashboard', {
       locals,
       data,
-      layout: adminLayout
+      layout: logout
     });
 
   } catch (error) {
@@ -117,7 +118,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
     const data = await Post.find();
     res.render('admin/add-post', {
       locals,
-      layout: adminLayout
+      layout: logout
     });
 
   } catch (error) {
@@ -168,7 +169,7 @@ router.get('/edit-post/:id', authMiddleware, async (req, res) => {
     res.render('admin/edit-post', {
       locals,
       data,
-      layout: adminLayout
+      layout: logout
     })
 
   } catch (error) {
