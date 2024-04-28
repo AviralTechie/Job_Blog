@@ -383,9 +383,13 @@ img{
 /* Admin Page */
 
 .signin-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 50px;
+    right: 50px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -397,14 +401,19 @@ img{
 
 .signin-form {
     margin-top: 20px;
+    justify-content: center;
+    left: 20px;
+    right: 20px;
 }
 
 .form-group {
     margin-bottom: 20px;
+
 }
 
 .form-label {
     display: block;
+    justify-content: center;
     margin-bottom: 5px;
     font-weight: bold;
 }
